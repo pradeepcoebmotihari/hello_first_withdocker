@@ -1,0 +1,14 @@
+---
+- hosts: server
+  user: ansible
+  become: yes
+  connection: yes
+  tasks:
+    - name: copy the file
+      action:
+      copy:
+        src: webapp/target/webapp.war 
+        dest: /opt/tomcat/webapps/
+        #  tasks:
+        #- name: service restart
+        #command: sh /opt/tomcat/bin/startup.sh 
