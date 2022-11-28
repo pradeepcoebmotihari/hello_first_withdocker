@@ -1,4 +1,5 @@
 #!/bin/bash
+export AWS_REGION=ap-south-1
 echo "[server]" > hosts
 for i in `aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names jenkinsasg --query 'AutoScalingGroups[*].Instances[*].InstanceId' --output text`
 do
