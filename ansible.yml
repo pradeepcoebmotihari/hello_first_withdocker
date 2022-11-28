@@ -1,14 +1,12 @@
----
 - hosts: server
   user: ansible
   become: yes
   connection: ssh
   tasks:
-    - name: copy the file
-      action:
+    - name: install httpd on linux
+      action: yum name=httpd state=installed
+    - name: copy file
       copy:
-        src: webapp/target/webapp.war 
-        dest: /opt/tomcat/webapps/
-        #  tasks:
-        #- name: service restart
-        #command: sh /opt/tomcat/bin/startup.sh 
+        src: test.txt
+        dest: /var
+~                  
