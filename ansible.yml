@@ -2,7 +2,7 @@
 - hosts: server
   user: ansible
   become: yes
-  connection: yes
+  connection: ssh
   tasks:
     - name: copy the file
       action:
