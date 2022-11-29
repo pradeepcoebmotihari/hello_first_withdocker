@@ -5,7 +5,7 @@ for i in `aws autoscaling describe-auto-scaling-groups --auto-scaling-group-name
 do 
 aws autoscaling detach-instances --instance-ids $i --auto-scaling-group-name ansibleasg --should-decrement-desired-capacity
 aws ec2 describe-instances --instance-ids $i |jq -r '.Reservations[].Instances[].PrivateIpAddress' >> /etc/ansible/hosts
-ansible-playbook ansible.yml
+ansiblePlaybook credentialsId: 'foransible', disableHostKeyChecking: true, installation: 'ansible', playbook: 'ansible.yml'
 sleep 330
 aws autoscaling attach-instances --instance-ids $i --auto-scaling-group-name ansibleasg
 done
