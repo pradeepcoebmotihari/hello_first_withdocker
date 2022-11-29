@@ -9,5 +9,4 @@
     - name: copy file
       copy:
         src: test.txt
-        dest: /var
-~                  
+        dest: /var                
