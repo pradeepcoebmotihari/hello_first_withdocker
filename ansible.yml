@@ -8,5 +8,5 @@
       action: yum name=httpd state=installed
     - name: copy file
       copy:
-        src: test.txt
+        src: /var/test.txt
         dest: /var                
