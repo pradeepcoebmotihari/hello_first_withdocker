@@ -1,6 +1,7 @@
 ---
 - hosts: server
   user: ansible
+  ansible_ssh_pass: 12qwaszx
   become: yes
   connection: ssh
   tasks:
