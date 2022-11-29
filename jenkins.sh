@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo "[server]" > /etc/ansible/hosts
 for i in `aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names ansibleasg --query 'AutoScalingGroups[*].Instances[*].InstanceId' --output text` 
 do 
