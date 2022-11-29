@@ -5,8 +5,5 @@
   connection: ssh
   tasks:
     - name: install httpd on linux
-      action: yum name=httpd state=installed
-    - name: copy file
-      copy:
-        src: /var/test.txt
-        dest: /var                
+      action: yum name=httpd state=present
+
