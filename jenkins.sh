@@ -1,4 +1,4 @@
-#!/bin/bas
+#!/bin/bash
 set -e
 for i in `aws elbv2 describe-target-health --target-group-arn arn:aws:elasticloadbalancing:ap-south-1:623240248731:targetgroup/jenkinstg/9adf4a6004cdb56e --query 'TargetHealthDescriptions[*].Target.Id' --output text`
 do
