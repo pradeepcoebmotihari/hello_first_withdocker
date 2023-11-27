@@ -10,4 +10,3 @@ spec:
     image:  pradeepcoeb/javaimage:buildno
     ports:
     - containerPort: 8080
-
