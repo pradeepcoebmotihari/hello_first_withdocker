@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: pod1
-    image:  pradeepcoeb/javaimage:buildno
+    image:  pradeepcoeb/javaimage:46
     ports:
     - containerPort: 8080
