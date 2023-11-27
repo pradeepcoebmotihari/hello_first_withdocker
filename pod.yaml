@@ -1,0 +1,8 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  containers:
+  - name: pod1
+    image:  pradeepcoeb/javaimage:${BUILD_NUMBER}
+    ports:
+    - containerPort: 8080
