@@ -4,10 +4,10 @@ metadata:
   namespace: pradeep
   name: pod
   labels:
-     name: pod
+    name: pod
 spec:
   containers:
   - name: pod1
-    image:  pradeepcoeb/javaimage:52
+    image: pradeepcoeb/javaimage:52
     ports:
     - containerPort: 8080
